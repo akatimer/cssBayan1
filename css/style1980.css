@@ -7,3 +7,12 @@
   height: 2px;
   background: black;
 }
+
+.bayan-cross {
+  width: 20px;
+  height: 20px;
+  background-image: url(../assets/ico/plus-icon.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
