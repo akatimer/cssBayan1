@@ -1,0 +1,125 @@
+@media (max-width: 320px) {
+  * {
+    box-sizing: border-box;
+    
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    background: #f1f1f1;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  body {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1920px;
+    min-width: 320px;
+    min-height: 100vh;
+    font-size: 1em;
+    justify-content: center;
+  }
+  
+  .bayan-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    width: 60vw; 
+  }
+  
+  
+  
+  .bayan-main-container{
+    color: rgb(0, 0, 253);
+  }
+  
+  .bayan-main-container:hover {
+    color: black;
+  }
+  
+  .header-div {
+    font-size: 2vh;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .bayan-container input {
+    display: none;
+  }
+  
+  .bayan-line {
+    height: 1px;
+    width: 100%;
+    background: black;
+  }
+  
+  .bayan-input-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .bayan-img-unchecked {
+    overflow: hidden;
+    height: 0;
+    transition: 0.6s;
+    width: 100%;
+  }
+  
+  .cross {
+    width: 0;
+  }
+  
+  .bayan-main-container:hover>.bayan-container>.bayan-input-label>.bayan-name-and-cross>.bayan-cross>.cross {
+    width: 1.5vh;
+    transition: 0.6s;
+  }
+  
+  .bayan-name-and-cross {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1vh 0;
+  }
+  
+  .bayan-name {
+    font-size: 2vh;
+  }
+  
+  .bayan-main-container input:checked ~ .bayan-input-label>.bayan-meme-content>.bayan-img-unchecked {
+    height: 17vh;
+    width: auto;
+  }
+  
+  .bayan-main-container input:checked ~ .bayan-input-label>.bayan-name-and-cross>.bayan-name {
+    color: black;
+  }
+  
+  .bayan-main-container input:checked ~ .bayan-input-label>.bayan-name-and-cross>.bayan-cross>.cross {
+    transform: rotate(45deg);
+    transition: 0.7s;
+  }
+  
+  .bayan-container:hover>.bayan-input-label>.bayan-meme-content>.bayan-img-unchecked {
+    height: 17vh;
+    width: auto;
+  } 
+  
+  .bayan-container:hover>.bayan-input-label>.bayan-name-and-cross>.bayan-cross>.cross {
+    transform: rotate(45deg);
+    transition: 0.7s;
+  }
+  
+  .bayan-container:hover,
+  .bayan-line:hover,
+  .bayan-input-label:hover,
+  .bayan-meme-content:hover {
+    cursor: pointer;
+  }
+} 
