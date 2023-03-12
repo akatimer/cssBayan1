@@ -1,18 +1,96 @@
+* {
+  box-sizing: border-box;
+  
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #f1f1f1;
+  /* overflow-x: hidden; */
+  width: 100%;
+  margin: 0 auto;
+}
+
+body {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1920px;
+  min-width: 320px;
+  /* width: 100%; */
+  min-height: 100vh;
+  font-family: 'Tilt Warp', sans-serif;
+  font-size: 1em;
+  justify-content: center;
+}
+
 .header-div {
   font-size: 30px;
   font-weight: bold;
 }
 
+.bayan-container {
+  display: flex;
+  padding: 3.75% 9.4%;
+  flex-direction: column;
+  align-items: flex-start;
+  align-items: center;
+  width: 60vw;
+}
+
+.bayan-container input {
+  display: none;
+}
+
 .bayan-line {
   height: 2px;
+  width: 100%;
   background: black;
 }
 
-.bayan-cross {
+.bayan-input-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.bayan-img-unchecked {
+  overflow: hidden;
+  height: 0;
+  transition: 0.6s;
+}
+
+.cross {
+  width: 2.1vh;
+}
+
+.bayan-name-and-cross {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.bayan-main-container input:checked ~ .bayan-input-label>.bayan-meme-content>.bayan-img-unchecked {
+  
+  height: 40.1vh;
+  
+}
+
+.bayan-main-container input:checked ~ .bayan-input-label>.bayan-name-and-cross>.bayan-cross>.cross {
+  
+  transform: rotate(45deg);
+  transition: 0.7s;
+}
+
+
+ /* .bayan-cross {
   width: 20px;
   height: 20px;
   background-image: url(../assets/ico/plus-icon.png);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-}
+}  */
